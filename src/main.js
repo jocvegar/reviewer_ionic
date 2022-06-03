@@ -25,6 +25,8 @@ import "./theme/variables.css";
 // Components
 import * as IonComponents from "@ionic/vue";
 
+import "./registerServiceWorker";
+
 const app = createApp(App).use(IonicVue).use(router);
 
 Object.keys(IonComponents).forEach((key) => {
