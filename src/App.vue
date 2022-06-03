@@ -1,18 +1,17 @@
 <template>
   <ion-app>
     <ion-router-outlet />
+    <nav-bar />
   </ion-app>
 </template>
 
-<script lang="ts">
-import { IonApp, IonRouterOutlet } from '@ionic/vue';
-import { defineComponent } from 'vue';
+<script>
+import NavBar from "./components/NavBar.vue";
 
-export default defineComponent({
-  name: 'App',
+export default {
+  name: "App",
   components: {
-    IonApp,
-    IonRouterOutlet
-  }
-});
+    NavBar,
+  },
+};
 </script>
