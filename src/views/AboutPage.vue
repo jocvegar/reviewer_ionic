@@ -1,18 +1,14 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>About</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <HeaderContainer> About </HeaderContainer>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
+      <ion-header collapse="fade">
         <ion-toolbar>
           <ion-title size="large">About</ion-title>
         </ion-toolbar>
       </ion-header>
 
-      <ion-card>
+      <ion-card color="light">
         <ion-card-header>
           <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
           <ion-card-title>Card Title</ion-card-title>
@@ -23,7 +19,7 @@
           clean.
         </ion-card-content>
       </ion-card>
-      <ion-card>
+      <ion-card color="light">
         <ion-card-header>
           <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
           <ion-card-title>Card Title</ion-card-title>
@@ -34,7 +30,7 @@
           clean.
         </ion-card-content>
       </ion-card>
-      <ion-card>
+      <ion-card color="light">
         <ion-card-header>
           <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
           <ion-card-title>Card Title</ion-card-title>
@@ -45,7 +41,7 @@
           clean.
         </ion-card-content>
       </ion-card>
-      <ion-card>
+      <ion-card color="light">
         <ion-card-header>
           <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
           <ion-card-title>Card Title</ion-card-title>
@@ -56,7 +52,7 @@
           clean.
         </ion-card-content>
       </ion-card>
-      <ion-card>
+      <ion-card color="light">
         <ion-card-header>
           <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
           <ion-card-title>Card Title</ion-card-title>
@@ -67,7 +63,7 @@
           clean.
         </ion-card-content>
       </ion-card>
-      <ion-card>
+      <ion-card color="light">
         <ion-card-header>
           <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
           <ion-card-title>Card Title</ion-card-title>
@@ -78,7 +74,7 @@
           clean.
         </ion-card-content>
       </ion-card>
-      <ion-card>
+      <ion-card color="light">
         <ion-card-header>
           <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
           <ion-card-title>Card Title</ion-card-title>
@@ -94,7 +90,12 @@
 </template>
 
 <script>
+import HeaderContainer from "@/components/HeaderContainer.vue";
+
 export default {
   name: "AboutPage",
+  components: {
+    HeaderContainer,
+  },
 };
 </script>

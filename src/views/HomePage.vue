@@ -1,12 +1,8 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Home</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <HeaderContainer> Home </HeaderContainer>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
+      <ion-header collapse="fade">
         <ion-toolbar>
           <ion-title size="large">Home</ion-title>
         </ion-toolbar>
@@ -19,11 +15,19 @@
 
 <script>
 import ExploreContainer from "@/components/ExploreContainer.vue";
+import HeaderContainer from "@/components/HeaderContainer.vue";
 
 export default {
   name: "HomePage",
   components: {
     ExploreContainer,
+    HeaderContainer,
   },
 };
 </script>
+
+<style>
+ion-content {
+  --ion-background-color: #ffca22;
+}
+</style>

@@ -1,12 +1,8 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>User</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <HeaderContainer> User </HeaderContainer>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
+      <ion-header collapse="fade">
         <ion-toolbar>
           <ion-title size="large">User</ion-title>
         </ion-toolbar>
@@ -18,11 +14,13 @@
 
 <script>
 import ExploreContainer from "@/components/ExploreContainer.vue";
+import HeaderContainer from "@/components/HeaderContainer.vue";
 
 export default {
   name: "UserPage",
   components: {
     ExploreContainer,
+    HeaderContainer,
   },
 };
 </script>
