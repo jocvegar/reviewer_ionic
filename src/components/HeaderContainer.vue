@@ -1,7 +1,7 @@
 <template>
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title>
+      <ion-title size="large">
         <slot></slot>
       </ion-title>
     </ion-toolbar>

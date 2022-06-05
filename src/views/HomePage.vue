@@ -2,7 +2,7 @@
   <ion-page>
     <HeaderContainer> Reviewer </HeaderContainer>
     <ion-content :fullscreen="true">
-      <ion-refresher slot="fixed" @ionRefresh="doRefresh3($event)">
+      <ion-refresher slot="fixed" @ionRefresh="refresh($event)">
         <ion-refresher-content></ion-refresher-content>
       </ion-refresher>
       <ion-header collapse="fade">
@@ -36,8 +36,9 @@ export default {
     };
   },
   methods: {
-    async doRefresh3(event) {
-      this.fetchFirebase();
+    async refresh(event) {
+      // this.fetchFirebase();
+      this.$store.commit("forceUpdate");
       setTimeout(() => {
         event.detail.complete();
         event.target.complete();
@@ -55,7 +56,7 @@ export default {
           console.log("No such document!");
         }
       } catch (e) {
-        console.log("e", e);
+        console.error("eror: ", e);
       }
     },
   },

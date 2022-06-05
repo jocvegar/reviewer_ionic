@@ -26,8 +26,9 @@ import "./theme/variables.css";
 import * as IonComponents from "@ionic/vue";
 
 import "./registerServiceWorker";
+import store from './store'
 
-const app = createApp(App).use(IonicVue).use(router);
+const app = createApp(App).use(store).use(IonicVue).use(router);
 
 Object.keys(IonComponents).forEach((key) => {
   if (/^Ion[A-Z]\w+$/.test(key)) {
