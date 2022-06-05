@@ -21,11 +21,14 @@
       "description": "Home Screen"
     }
   ],
-  "description": "A review App",
+  "description": "A review app",
   "orientation": "any",
   "name": "Reviewer",
   "short_name": "Reviewer",
   "theme_color": "#3880ff",
+  "background_color": "#3880ff",
+  "start_url": ".",
+  "display": "standalone",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
@@ -99,8 +102,5 @@
       "sizes": "150x150",
       "type": "image/png"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#000000"
+  ]
 }

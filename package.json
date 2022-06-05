@@ -2,7 +2,7 @@
   "name": "reviewer",
   "version": "0.0.2",
   "private": true,
-  "description": "Reviewer",
+  "description": "A review app",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
