@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <strong>{{ name }}</strong>
+    <strong>{{ props.name }}</strong>
     <p>
       Explore
       <a
@@ -13,13 +13,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "ExploreContainer",
-  props: {
-    name: String,
-  },
-};
+<script setup>
+// eslint-disable-next-line no-undef
+const props = defineProps({
+  name: String,
+});
 </script>
 
 <style scoped>
