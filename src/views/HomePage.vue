@@ -2,6 +2,9 @@
   <ion-page>
     <HeaderContainer> Reviewer </HeaderContainer>
     <ion-content :fullscreen="true">
+      <ion-refresher slot="fixed" @ionRefresh="doRefresh3($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
       <ion-header collapse="fade">
         <ion-toolbar>
           <ion-title size="large">Reviewer</ion-title>
@@ -32,20 +35,32 @@ export default {
       greeting: "No puede ser",
     };
   },
-  async mounted() {
-    const docRef = doc(db, "test", "something");
-    const docSnap = await getDoc(docRef);
-    try {
-      if (docSnap.exists()) {
-        this.greeting = Object.assign(docSnap.data(), {
-          id: docSnap.id,
-        });
-      } else {
-        console.log("No such document!");
+  methods: {
+    async doRefresh3(event) {
+      this.fetchFirebase();
+      setTimeout(() => {
+        event.detail.complete();
+        event.target.complete();
+      }, 1000);
+    },
+    async fetchFirebase() {
+      const docRef = doc(db, "test", "something");
+      const docSnap = await getDoc(docRef);
+      try {
+        if (docSnap.exists()) {
+          this.greeting = Object.assign(docSnap.data(), {
+            id: docSnap.id,
+          });
+        } else {
+          console.log("No such document!");
+        }
+      } catch (e) {
+        console.log("e", e);
       }
-    } catch (e) {
-      console.log("e", e);
-    }
+    },
+  },
+  mounted() {
+    this.fetchFirebase();
   },
 };
 </script>
