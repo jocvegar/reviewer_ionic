@@ -7,6 +7,7 @@
           <ion-title size="large">Reviwer</ion-title>
         </ion-toolbar>
       </ion-header>
+      <div class="header"><h2>HOLA</h2></div>
       <ExploreContainer name="Tab 1 page" />
     </ion-content>
   </ion-page>
@@ -28,5 +29,10 @@ export default {
 <style>
 ion-content {
   --ion-background-color: #ffca22;
+}
+.header {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
 </style>
